@@ -35,10 +35,12 @@ function App() {
   // delete task status 
   const [confirmstatus,setConfirmstatus] =useState([false,false]);
   
+  const [ISworking, setIsworking] = useState(-1);
 
 
+    const updateValue=(e)=>{
 
-    const updateValue=()=>{
+           setIsworking(e);
          
          
     }
@@ -100,7 +102,7 @@ function App() {
 
 <Route path="/update" 
                element={
-               <Updatetask tasks={tasks} Startworking={updateValue} checked={checked}  confirmstatus={confirmstatus} setConfirmstatus={setConfirmstatus} route={'update'}/>}
+               <Updatetask tasks={tasks} setTasks={setTasks} Startworking={updateValue} checked={checked}  confirmstatus={confirmstatus} setConfirmstatus={setConfirmstatus} route={'update'} ISworking={ISworking} setIsworking={setIsworking} />}
                />
 
 <Route path="/login" 

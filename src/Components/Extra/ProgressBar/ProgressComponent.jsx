@@ -1,10 +1,10 @@
 import React from 'react';
 import { Progress } from "flowbite-react";
-const ProgressComponent = () => {
+const ProgressComponent = ({value}) => {
     return (
         
-             <Progress
-      progress={45}
+      <Progress
+      progress={value}
       progressLabelPosition="inside"
       textLabelPosition="outside"
       size="lg"
