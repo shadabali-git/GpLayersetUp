@@ -25,17 +25,19 @@ const CreateTask = ( {tasks,setTasks }) => {
         else if(endingDate === ''){
                setAlertValue('Ending Date is required')
         }
-        else if(endingDate[endingDate.length-2]+endingDate[endingDate.length-1] < GetDate()[GetDate().length-2]+GetDate()[GetDate().length-1] ){
-            setAlertValue('Ending date should be greater than or equal to current date')
+        else if(Number(endingDate[endingDate.length-2]+endingDate[endingDate.length-1] )< Number(GetDate()[GetDate().length-2]+GetDate()[GetDate().length-1] )){
+             console.log(endingDate[endingDate.length-2]+endingDate[endingDate.length-1]);
+              console.log("*",GetDate()[GetDate().length-2]+GetDate()[GetDate().length-1]);
+            setAlertValue('Ending date should be greater than or equal to current date 1')
         }
         else if(endingDate[endingDate.length-2]+endingDate[endingDate.length-1] === GetDate()[GetDate().length-2]+GetDate()[GetDate().length-1] && endingDate[endingDate.length-5]+endingDate[endingDate.length-4] < GetDate()[GetDate().length-5]+GetDate()[GetDate().length-4]){
-            setAlertValue('Ending date should be greater than or equal to current date')
+            setAlertValue('Ending date should be greater than or equal to current date 2')
         }
         else if(endingDate[endingDate.length-2]+endingDate[endingDate.length-1] === GetDate()[GetDate().length-2]+GetDate()[GetDate().length-1] && endingDate[endingDate.length-5]+endingDate[endingDate.length-4] === GetDate()[GetDate().length-5]+GetDate()[GetDate().length-4] && endingDate[endingDate.length-8]+endingDate[endingDate.length-7] < GetDate()[GetDate().length-8]+GetDate()[GetDate().length-7]){
-            setAlertValue('Ending date should be greater than or equal to current date')
+            setAlertValue('Ending date should be greater than or equal to current date 3 ')
         }
         else if(endingDate[endingDate.length-2]+endingDate[endingDate.length-1] === GetDate()[GetDate().length-2]+GetDate()[GetDate().length-1] && endingDate[endingDate.length-5]+endingDate[endingDate.length-4] === GetDate()[GetDate().length-5]+GetDate()[GetDate().length-4] && endingDate[endingDate.length-8]+endingDate[endingDate.length-7] === GetDate()[GetDate().length-8]+GetDate()[GetDate().length-7] && endingDate[endingDate.length-11]+endingDate[endingDate.length-10] < GetDate()[GetDate().length-11]+GetDate()[GetDate().length-10]){
-            setAlertValue('Ending date should be greater')
+            setAlertValue('Ending date should be greater 4')
         }
        else{
             setAlertValue('');
