@@ -5,6 +5,7 @@ import CreateTask from './Components/CreateTask/CreateTask'
 import DeleteTask from './Components/DeleteTask/DeleteTask'
 import Updatetask from './Components/UpdateTask/Updatetask'
 import { useEffect, useState } from "react"
+import Login from './Components/Login-SIgnup/Login/Login'
 
 
 
@@ -107,7 +108,7 @@ function App() {
 
 <Route path="/login" 
                element={
-                <h2> login page</h2>
+                  <Login/>
                }
                />
 <Route path="/register" 
