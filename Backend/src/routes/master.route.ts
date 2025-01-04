@@ -1,18 +1,8 @@
 import { Router } from 'express';
-import {
-    createTaskHandler,
-    getAllTasksHandler,
-    getTaskByIdHandler,
-    updateTaskStatusHandler,
-    deleteTaskHandler
-} from '../controllers/taskController';
-
+import TasksRoute from "./TasksOperations/Tasks.route";
 const router = Router();
 
-router.post('/tasks', createTaskHandler);
-router.get('/tasks', getAllTasksHandler);
-router.get('/tasks/:id', getTaskByIdHandler);
-router.put('/tasks/:id', updateTaskStatusHandler);
-router.delete('/tasks/:id', deleteTaskHandler);
+//  here I use this
+router.use(TasksRoute);
 
 export default router;

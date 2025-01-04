@@ -1,6 +1,6 @@
-import express,{Request,Response} from 'express';
+import express from 'express';
 import dotenv from 'dotenv';
-// import routes from './routes';
+import routes from './routes/master.route';
 import bodyParser from 'body-parser';
 import {Port} from "./config/environment";
 import mongoConnection from "./config/mongoConnection";
@@ -14,11 +14,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Routes
-// app.use('/api', routes);
-app.get('/',(req:Request,res:Response)=>{
-
-    res.status(200).json({m:"working here"})
-})
+app.use('/api/v1', routes);
 
 // Start server
 app.listen(Port, async () => {

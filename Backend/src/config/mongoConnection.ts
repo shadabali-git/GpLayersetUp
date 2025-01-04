@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import {Mongo_Url} from "./environment"
 
-
+//  mongo connection using url
 const mongoConnection=async()=>{
     try{
         await mongoose.connect(Mongo_Url)

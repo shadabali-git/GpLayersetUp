@@ -1,8 +1,6 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Layout from "./components/Layout.tsx";
-import Dashboard from "./components/Master/Dashboard.tsx";
-import AddTask from "./components/Todo-Operation/AddTask.tsx"
-import EditTodo from "./components/Todo-Operation/EditTodo.tsx";
+import Home from "./Pages/Home.tsx"
 
 function App() {
 
@@ -11,9 +9,11 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout/>}>
-                    <Route index element={<Dashboard/>}/>
-                    <Route path="add" element={<AddTask/>}/>
-                    <Route path="edit" element={<EditTodo/>}/>
+                    <Route index element={<Home/>}/>
+                    <Route path="profile" element={<h2>Profile user </h2>}/>
+                    <Route path="edit" element={<h2> Welcome editing mode</h2>}/>
+                    <Route path="about" element={<h2> About use we Todo management </h2>}/>
+                    <Route path="delete" element={<h2> delete options here </h2>}/>
 
                 </Route>
             </Routes>

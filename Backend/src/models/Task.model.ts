@@ -1,5 +1,6 @@
 import mongoose, { Document,ObjectId } from 'mongoose';
 
+//  model for task
 export interface ITask extends Document {
     _id:ObjectId
     title: string;
